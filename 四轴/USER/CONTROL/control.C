@@ -152,7 +152,7 @@ void CONTROL(float rol_now, float pit_now, float yaw_now, float rol_tar, float p
 		
 	PID_ROL.OUT = PID_ROL.pout + PID_ROL.iout + PID_ROL.dout;
 	PID_PIT.OUT = PID_PIT.pout + PID_PIT.iout + PID_PIT.dout;
-	PID_YAW.OUT = PID_YAW.pout + /*PID_PIT.iout + PID_YAW.dout;	
+	PID_YAW.OUT = PID_YAW.pout + PID_PIT.iout + PID_YAW.dout;	
 	
 
 	moto1 = throttle + PID_ROL.OUT - PID_PIT.OUT + PID_YAW.OUT;
